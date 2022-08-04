@@ -1,0 +1,50 @@
+img {
+    height: 15vw !important;
+    width: 15vw !important;
+    display: block;
+}
+
+.testDivs {
+    margin-top: 10px;
+    border: 2px solid blue;
+    border-radius: 5px;
+    width: 25%;
+    height: 100px;
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(24, 210, 201, 0.8);
+    margin-left:auto;
+    margin-right:auto;
+    overflow-x:hidden;
+    overflow-y:scroll;
+}
+
+.testDivs:hover {
+    background-color:lawngreen;
+}
+
+#div1 {
+
+}
+
+#div2 {
+
+}
+
+a {
+    color:darkviolet;
+}
+
+a:link {
+    color:crimson;
+}
+
+a:visited {
+    color:darkorange;
+}
+
+a:hover {
+    color:cyan;
+}
+
+
