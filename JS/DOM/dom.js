@@ -6,6 +6,8 @@ let counter = 0;
 // Selectors
 let addBtn = document.querySelector("#addBtn");
 let mainDiv = document.querySelector("#addToMe");
+let saveBtn = document.querySelector("#saveBtn");
+let saveDiv = document.querySelector("#saveToMe");
 
 // Functions
 let addToPage = () => {
@@ -25,5 +27,18 @@ let addToPage = () => {
     mainDiv.appendChild(newDiv);
 }
 
+let save = () => {
+
+    let newDiv = document.createElement("div"); // <div></div>
+    newDiv.setAttribute("class", "entries"); // <div class="entries"></div>
+
+    let newText = document.createTextNode(counter);
+
+    newDiv.appendChild(newText);
+    saveDiv.appendChild(newDiv);
+
+}
+
 // Event Listeners
 addBtn.addEventListener("click", addToPage);
+saveBtn.addEventListener("click", save);

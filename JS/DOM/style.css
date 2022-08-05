@@ -1,0 +1,29 @@
+#saveToMe {
+    border: 2px solid cornflowerblue;
+    border-radius: 10px;
+    width: 50%;
+    margin-top: 5px;
+    margin-left: 10px;
+    padding: 10px;
+}
+
+#addToMe {
+    margin-left: 10px;
+}
+
+#addBtn {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+#saveBtn {
+    margin-top: 10px;
+}
+
+.entries {
+    border: 2px solid;
+    border-radius: 5px;
+    text-align: center;
+    background-color: lightgrey;
+    margin-top: 2px;
+}
