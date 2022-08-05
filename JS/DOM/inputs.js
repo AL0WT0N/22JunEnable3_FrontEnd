@@ -5,19 +5,46 @@
 let inputOne = document.querySelector("#inputOne");
 let inputTwo = document.querySelector("#inputTwo");
 let mainDiv = document.querySelector("#mainDiv");
-let addBtn = document.querySelector("#addBtn");
+
+let calcBtns = document.querySelectorAll(".calcBtns");
+
 let clearBtn = document.querySelector("#clearBtn");
 
 // Functions
-let add = (event) => {
+let addToPage = (valueOne, operator, valueTwo, result) => {
+    let resultDiv = document.createElement("div");
+    let resultTxt = document.createTextNode(`${valueOne} ${operator} ${valueTwo} = ${result}`);
+    resultDiv.appendChild(resultTxt);
+    mainDiv.appendChild(resultDiv);
+}
+
+let calculate = (event) => {
+
+    let operation = event.target.id;
     let valueOne = parseInt(inputOne.value);
     let valueTwo = parseInt(inputTwo.value);
+    let result;
 
-    let resultDiv = document.createElement("div");
-    let result = document.createTextNode(`${valueOne} + ${valueTwo} = ${valueOne + valueTwo}`);
-
-    resultDiv.appendChild(result);
-    mainDiv.appendChild(resultDiv);
+    switch(operation) {
+        case "addBtn":
+            result = valueOne + valueTwo;
+            addToPage(valueOne, "+", valueTwo, result);
+            break;
+        case "subBtn":
+            result = valueOne - valueTwo;
+            addToPage(valueOne, "-", valueTwo, result);
+            break;
+        case "mulBtn":
+            result = valueOne * valueTwo;
+            addToPage(valueOne, "*", valueTwo, result);
+            break;
+        case "divBtn":
+            result = valueOne / valueTwo;
+            addToPage(valueOne, "/", valueTwo, result);
+            break;
+        default:
+            
+    }
 }
 
 let clear = () => {
@@ -25,5 +52,11 @@ let clear = () => {
 }
 
 // Listeners
-addBtn.addEventListener("click", add);
+
+calcBtns.forEach(btn => {btn.addEventListener("click", calculate);});
+
+// for (let btn of calcBtns) {
+//     btn.addEventListener("click", calculate);
+// }
+
 clearBtn.addEventListener("click", clear);
