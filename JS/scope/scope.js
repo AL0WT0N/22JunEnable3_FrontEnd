@@ -5,7 +5,9 @@
 
 // This is in global scope
 // It can be accessed throughout the whole file, including inside functions.
+
 let flag = false;
+console.log(flag);
 
 let changeFlag = () => {
     flag = true;
@@ -15,15 +17,14 @@ let changeFlag = () => {
     let number = 10;
 }
 
-
 changeFlag();
 console.log(flag);
 
-// console.log(number);
+
 
 for (let i = 0; i < 10; i++) {
     // Loop scoped
     let myVariable = "hello";
 }
 
-console.log(myVariable);
+// console.log(myVariable);
